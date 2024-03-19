@@ -1,0 +1,29 @@
+{
+    "version_info": [
+        {
+            "main": "1.0.2",
+            "api": "1.0.0",
+            "config": 1,
+            "commands": 1,
+            "disabled": false
+        },
+        {
+            "main": "1.0.1",
+            "api": "1.0.0",
+            "config": 1,
+            "commands": 1,
+            "disabled": false
+        },
+        {
+            "main": "1.0.0",
+            "api": "1.0.0",
+            "config": 1,
+            "commands": 1,
+            "disabled": false
+        }
+    ],
+    "license_get": [
+        "490537526436560896",
+        "447076198762151937"
+    ]
+}
