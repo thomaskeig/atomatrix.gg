@@ -1,6 +1,13 @@
 {
     "version_info": [
         {
+            "main": "1.1.0",
+            "api": "1.0.0",
+            "config": 2,
+            "commands": 1,
+            "disabled": false
+        },
+        {
             "main": "1.0.2",
             "api": "1.0.0",
             "config": 1,
