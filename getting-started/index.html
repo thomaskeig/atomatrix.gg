@@ -1,89 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
+      <meta charset="UTF-8">
 
-  <!-- Page Information
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Atomatrix | Getting Started</title>
+      <!-- Set the page name & favicon.ico file -->
+      <title>Atomatrix | Getting Started</title>
 
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+      <!-- Load Font -->
+      <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
 
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"> 
+      <!-- Load the external CSS file -->
+      <link rel="stylesheet" href="styles.css">
+      
+  </head>
 
+  <body id="layout">
 
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
+    <main id="main">
+      
+      <div id="title">
+        <h1>Getting Started with your NEW Resource!</h1>
+        <h2 class="layout">Thank you so much for purchasing a resource from me. I hope you enjoy it.</h2>
+      </div>
+      
+      <div id="boxes">
 
-    <!-- Themes:
-            Light:  css/main-light.css
-            Dark:   css/main-dark.css
-     -->
-    <link rel="stylesheet" href="css/main-dark.css">
+        <div class="box-flex">
 
-    <!-- Brand Styles -->
-    <link rel="stylesheet" href="css/brands.css">
+          <div class="box">
+            <h2 class="box-header">Documentation</h2>
+            <p class="box-text">All information including video tutorials to set up the server can be found on the documentation.</p>
+            <p class="box-text">Please read the docs before asking any questions in the support server as most questions will have already been answered for you.</p>
+            <a class="button button-documentation" href="https://docs.atomatrix.gg" target="_blank" rel="noopener">Visit Documentation</a>
+          </div>
 
+          <div class="box">
+            <h2 class="box-header">Discord Server</h2>
+            <p class="box-text">If you need, you can also join the Discord server for support and help.</p>
+            <p class="box-text">You will have to verify your purchase to get support. If you can't verify your purchase, support will not be given.</p>
+            <a class="button button-discord" href="https://discord.gg/5VMbcu6Sf7" target="_blank" rel="noopener">Join Discord Server</a>
+          </div>
 
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.webp">
+          <div class="box">
+            <h2 class="box-header">Terms of Service</h2>
+            <p class="box-text">By using this resource, you automatically agree to the Terms of Service.</p>
+            <p class="box-text">The main rule in this states that you cannot redistribute this file or re-use configs in any other servers that you don't own. This includes giving it to a friend. If they re-distribute the setup, you are held responsible.</p>
+            <a class="button button-terms" href="https://atmtx.co/terms" target="_blank" rel="noopener">Terms of Service</a>
+          </div>
 
-</head>
-
-<body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 5%">
-
-        <!-- Title -->
-        <a>
-          <h1 class="title">Getting Started with your NEW Resource!</h1>
-          </a>
-
-        <!-- Short Bio -->
-        <p>Thank you so much for purchasing a resource from me. I hope you enjoy it.</p>
-
-        <hr class="horizontal-bar">
-
-        <p>ALL information to set up the server can be found on the documentation<br>(Please read the docs before asking any questions in the support server)</p>
-        
-        <a class="button button-documentation" href="https://docs.atomatrix.gg" target="_blank" rel="noopener">
-          <img class="icon" src="images/icons/gears.png" alt="Gears">Documentation</a>
-        <br>
-
-        <hr class="horizontal-bar">
-
-        <p>If you need, you can also join the Discord server for support and help.<br>Please don't use reviews as support, as your issue is most likely something that has been overlooked during setup.</p>
-
-        <a class="button button-discord" href="https://discord.gg/5VMbcu6Sf7" target="_blank" rel="noopener">
-          <img class="icon" src="images/icons/discord.svg" alt="Discord Logo">Discord Server</a>
-        <br>
-
-        <p>You will have to verify your purchase to get support. If you can't verify your purchase, support will not be given.</p>
-        
-        <hr class="horizontal-bar">
-
-        <p>By using this resource, you automatically agree to the Terms of Service listed <a href="https://docs.atomatrix.gg/miscellaneous/terms-of-service" target="_blank" rel="noopener">here</a>.</p>
-        
-        <p>The main rule in this states that you cannot redistribute this file or re-use configs in any other servers that you don't own. (This includes giving it to a friend. If they re-distribute the setup, YOU ARE HELD RESPONSIBLE)</p>
-        
-        <hr class="horizontal-bar">
+        </div>
 
       </div>
-    </div>
-  </div>
-</body>
 
+    </main>
+
+  </body>
 </html>
