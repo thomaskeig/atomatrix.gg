@@ -76,69 +76,6 @@ p {
   margin: auto;
 }
 
-/* !!! LOGO & NAVBAR CSS !!! */
-#header {
-  text-align: center;
-}
-
-.banner {
-  width: 100%;
-  border-radius: 15px;
-  padding-bottom: 10px;
-}
-
-#compressed_banner {
-  display: none;
-}
-
-.topnav {
-  border-radius: 12px;
-  max-width: 560px;
-  margin: auto;
-  overflow: hidden;
-  background-color: #87a1e0;
-  position: relative;
-}
-
-.topnav #navbar-ul {
-  display: none;
-}
-
-.topnav a {
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  display: block;
-}
-
-.topnav a.icon {
-  background: #6783c9;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.topnav a:hover {
-  font-weight: bold;
-}
-
-#navbar-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-a:hover {
-  color: white;
-}
-
-.active {
-  font-weight: bold;
-  color: white;
-}
-
 /* !!! HOME PAGE CSS !!! */
 #title {
   margin: 1em;
@@ -161,7 +98,7 @@ a:hover {
 }
 
 .box-flex > div {
-  background-image: linear-gradient(0deg, #a1baf8, #8da7e9);
+  background-color: #d2e0e4;
   justify-content: center;
   margin: 10px;
   padding: 0.5em;
