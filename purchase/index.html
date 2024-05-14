@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <meta charset="UTF-8">
+
+      <!-- Set the page name & favicon.ico file -->
+      <title>Purchase a commission</title>
+
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Load Font -->
+      <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+
+      <!-- Load the external CSS file -->
+      <link rel="stylesheet" href="styles.css">
+	  
+	  <link rel="icon" type="image/png" href="favicon.webp">
+      
+  </head>
+
+  <script async
+    src="https://js.stripe.com/v3/buy-button.js">
+  </script>
+
+  <body id="layout">
+
+    <main id="main">
+      
+      <div id="title">
+        <h1>Purchase a Preset Commission</h1>
+        <h2>You must specify your Discord ID at checkout. Once the payment is verified, a ticket will open for the commission to start in. <a href="https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID">How to find your Discord ID ↗</a></h2>
+      </div>
+      
+      <div id="boxes">
+
+        <div class="box-flex">
+
+          <div class="box">
+            <h2 class="box-header">Setup Installation & Configuration</h2>
+            <p class="box-text">I will set up your Atomatrix Server Setup for you on your host.</p>
+            <p class="box-text">NOTE: This commission is ONLY for Atomatrix Configurations. You must create a custom commission if you wish for me to set up a different resource.</p>
+
+            <stripe-buy-button buy-button-id="buy_btn_1PDvfQF6Yt8XRS6BycCtNSm0" publishable-key="pk_live_51Ocr6tF6Yt8XRS6BayqYGkxUEC9YUdam4kMZIaLxNVIufekZz197JOALZsp3gYmFsSgrqvMn9n3YWBt0DNlgRxpj00xno966SV"></stripe-buy-button>
+          </div>
+
+          <div class="box">
+            <h2 class="box-header">Config Installation & Configuration</h2>
+            <p class="box-text">I will set up your Atomatrix Configuration for you on your host.</p>
+            <p class="box-text">NOTE: This commission is ONLY for Atomatrix Configurations. You must create a custom commission if you wish for me to set up a different resource.</p>
+
+            <stripe-buy-button buy-button-id="buy_btn_1PGNx6F6Yt8XRS6Bjr1FS2lb" publishable-key="pk_live_51Ocr6tF6Yt8XRS6BayqYGkxUEC9YUdam4kMZIaLxNVIufekZz197JOALZsp3gYmFsSgrqvMn9n3YWBt0DNlgRxpj00xno966SV"></stripe-buy-button>
+          </div>
+
+          <div class="box">
+            <h2 class="box-header">Geyser/Bedrock Configuration</h2>
+            <p class="box-text">I will configure your server to allow bedrock clients to connect using the Geyser & Floodgate plugins.</p>
+
+            <stripe-buy-button buy-button-id="buy_btn_1PGO3sF6Yt8XRS6BOjEmg11f" publishable-key="pk_live_51Ocr6tF6Yt8XRS6BayqYGkxUEC9YUdam4kMZIaLxNVIufekZz197JOALZsp3gYmFsSgrqvMn9n3YWBt0DNlgRxpj00xno966SV"></stripe-buy-button>
+          </div>
+
+          <div class="box">
+            <h2 class="box-header">Proxy Configuration</h2>
+            <p class="box-text">I will set up Velocity on your proxy server to link your servers together so you can move between them with the /server command.</p>
+
+            <stripe-buy-button buy-button-id="buy_btn_1PEK6dF6Yt8XRS6Bt6gU8O2S" publishable-key="pk_live_51Ocr6tF6Yt8XRS6BayqYGkxUEC9YUdam4kMZIaLxNVIufekZz197JOALZsp3gYmFsSgrqvMn9n3YWBt0DNlgRxpj00xno966SV"></stripe-buy-button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>
