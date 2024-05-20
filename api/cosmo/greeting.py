@@ -3,7 +3,7 @@ print("                                                                         
 print("――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――")
 print("                                                                          ")
 print(BOLD + BLUE + UNDERLINE + f"Cosmo v{version} is now Online!" + RESET)
-print(WHITE + "• Join our discord server for support: " + GREEN + "discord.gg/a5htZzcgum")
+print(WHITE + "• Join our discord server for support: " + GREEN + "https://discord.gg/a5htZzcgum")
 print(WHITE + "• By using this bot you agree to all terms located here: " + GREEN + "https://atmtx.co/cosmo-terms")
 print(WHITE + "• Addons for the bot can be found here: " + GREEN + "https://atmtx.co/cosmo-addons")
 print("                                                                          ")
