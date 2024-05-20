@@ -17,6 +17,6 @@ else:
 print("                                                                          ")
 # print(BOLD + BLUE + UNDERLINE + "Important Information:" + RESET)
 # print(RED + "Leaking or redistributing Cosmo is not allowed. If you are found doing it,")
-# print(RED + "your license will be permanently disabled and you will be reported!")
+# print(RED + "your license will be permanently disabled, and you will be reported!")
 # print(RESET + "                                                                          ")
 print("――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――")
