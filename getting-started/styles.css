@@ -32,6 +32,11 @@ h2 {
   padding: 0.3em;
 }
 
+.portfolio-flex-box {
+  text-align: center;
+}
+
+
 .box {
   text-align: center;
 }
@@ -121,6 +126,16 @@ p {
   border-radius: 18px;
   cursor: pointer;
   text-align: center;
+}
+
+/* Tebex */
+.button.button-tebex {
+  color: #ffffff;
+  background-color: #208686;
+}
+.button.button-documentation:hover,
+.button.button-documentation:focus {
+  filter: brightness(90%);
 }
 
 /* Documentation */
