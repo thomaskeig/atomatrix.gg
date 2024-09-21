@@ -1,18 +1,26 @@
 {
     "23629": "lifesteal",
     "2318": "lifesteal",
+    "LIFESTEAL - Premium Server Setup": "lifesteal",
     "30412": "skyblock",
     "4490": "skyblock",
+    "SKYBLOCK - Premium Server Setup": "skyblock",
     "27680": "survival",
     "3710": "survival",
+    "SURVIVAL - Premium Server Setup": "skyblock",
     "37279": "oneblock",
     "5396": "oneblock",
+    "ONEBLOCK - Premium Server Setup": "oneblock",
     "28469": "factions",
     "4027": "factions",
+    "FACTIONS - Premium Server Setup": "factions",
     "25174": "ffa",
     "2864": "ffa",
+    "FREE FOR ALL - Premium Server Setup": "ffa",
     "26589": "boxpvp",
     "3361": "boxpvp",
+    "BOXPVP - Premium Server Setup": "boxpvp",
     "27082": "easyhub",
-    "3505": "easyhub"
+    "3505": "easyhub",
+    "EASY HUB - Premium Server Setup": "easyhub"
 }
