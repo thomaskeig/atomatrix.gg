@@ -1,0 +1,868 @@
+<html><head><base href=".">
+<meta charset="UTF-8">
+<title>Atomatrix - Premium Minecraft & Clash Royale Server Hosting</title>
+<style>
+:root {
+  --holy-gold: #FFD700;
+  --holy-white: #FFFFFF;
+  --holy-blue: #B7E4F9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #1a1a1a;
+  color: #000;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--holy-gold), var(--holy-blue));
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.nav a {
+  color: #000;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--holy-blue);
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(45deg, var(--holy-blue), #FFFFFF);
+}
+
+.daily-passage {
+  padding: 2rem;
+  text-align: center;
+  background: rgba(183, 228, 249, 0.1);
+  margin: 2rem auto;
+  max-width: 800px;
+  border-radius: 15px;
+  border: 2px solid var(--holy-gold);
+}
+
+.plans-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.plan-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 2rem;
+  width: 300px;
+  text-align: center;
+  transition: 0.3s;
+  backdrop-filter: blur(5px);
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.plan-title {
+  font-size: 1.5rem;
+  color: var(--holy-blue);
+  margin-bottom: 1rem;
+}
+
+.plan-price {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.plan-features {
+  list-style: none;
+  margin-bottom: 2rem;
+}
+
+.plan-features li {
+  margin: 0.5rem 0;
+}
+
+.btn {
+  background: var(--holy-blue);
+  color: #000;
+  padding: 0.8rem 2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: var(--holy-gold);
+  transform: scale(1.05);
+}
+
+.integrations {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(255,255,255,0.05);
+}
+
+.integration-logos {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.staff-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(45deg, #FFD700, #FFFFFF);
+  text-align: center;
+}
+
+.staff-card {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  max-width: 600px;
+  margin: 2rem auto;
+  backdrop-filter: blur(5px);
+  border: 2px solid #FFD700;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.staff-avatar {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.tournament-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(45deg, #B7E4F9, #FFFFFF);
+}
+
+.tournament-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.tournament-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  backdrop-filter: blur(5px);
+}
+
+.discord-banner {
+  background: #7289DA;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.game-modes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.mode-card {
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.mode-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* New Styles for Interactive UI */
+.configurator {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.option-item {
+  background: rgba(255, 215, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 2px solid transparent;
+}
+
+.option-item.selected {
+  border-color: var(--holy-blue);
+  background: rgba(255, 215, 0, 0.3);
+}
+
+.option-item:hover {
+  transform: translateY(-3px);
+}
+
+.price-calculator {
+  background: rgba(46, 204, 113, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.slider-container {
+  padding: 1rem;
+}
+
+.slider {
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.1);
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--holy-blue);
+  cursor: pointer;
+}
+
+.blessed-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 215, 0, 0.9);
+  color: #000;
+  padding: 15px;
+  border-radius: 8px;
+  animation: ascend 0.5s ease-out, holy-glow 2s infinite alternate;
+  z-index: 1000;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  font-size: 32px;
+}
+
+@keyframes holy-glow {
+  from { box-shadow: 0 0 10px #FFD700; }
+  to { box-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700; }
+}
+
+.holy-glow {
+  animation: holy-pulse 2s infinite;
+}
+
+@keyframes holy-pulse {
+  0% { box-shadow: 0 0 5px #FFD700; }
+  50% { box-shadow: 0 0 20px #FFD700, 0 0 30px #B7E4F9; }
+  100% { box-shadow: 0 0 5px #FFD700; }
+}
+
+.holy-title {
+  text-shadow: 0 0 10px #FFD700;
+  position: relative;
+}
+
+.holy-title::before,
+.holy-title::after {
+  content: "✝️";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.holy-title::before { left: -30px; }
+.holy-title::after { right: -30px; }
+
+.minigame-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 1001;
+  display: none;
+}
+
+.holy-button {
+  background: rgba(255, 215, 0, 0.8);
+  color: #000;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.holy-button:hover {
+  background: rgba(255, 215, 0, 1);
+}
+
+.holy-clicker {
+  text-align: center;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 400px;
+}
+
+.holy-cross {
+  font-size: 72px;
+  cursor: pointer;
+  user-select: none;
+  margin: 2rem auto;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">Atomatrix</div>
+  <nav class="nav">
+    <a href="https://atomatrix.com/minecraft">Minecraft</a>
+    <a href="https://atomatrix.com/clash-royale">Clash Royale</a>
+    <a href="https://atomatrix.com/about">About</a>
+    <a href="https://atomatrix.com/contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1 class="holy-title">Premium Game Server Hosting</h1>
+  <p>Powered by BuiltByBit and Polymart</p>
+</section>
+
+<section class="daily-passage">
+  <h2>🕊️ Today's Blessed Verse 🕊️</h2>
+  <p>For God so loved the world, that he gave his only Son, that whoever believes in him should not perish but have eternal life. - John 3:16</p>
+</section>
+
+<section class="tournament-section">
+  <h2>✝️ BLESSED CLASH ROYALE TOURNAMENTS ✝️</h2>
+  <div class="clash-holy-context" style="background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; margin-bottom: 20px; color: #000;">
+    <h2>🕊️ Clash Royale: A Divine Battle 🕊️</h2>
+    <p>Just as David faced Goliath with unwavering faith, our Clash Royale arena represents the eternal struggle between good and evil. Each match is an opportunity to demonstrate the virtues of patience, strategy, and perseverance - qualities praised in the Holy Scripture.</p>
+    <p>Through friendly competition, we build a blessed community founded on respect and fellowship.</p>
+    <blockquote style="font-style: italic; margin: 15px 0;">
+      "I can do all things through Him who strengthens me." - Philippians 4:13
+    </blockquote>
+  </div>
+  <div class="tournament-grid">
+    <div class="tournament-card">
+      <h3>🕊️ HOLY CHAMPIONSHIP 🕊️</h3>
+      <p>Every BLESSED Saturday at 3PM EST</p>
+      <p>Divine Prize Pool: $777</p>
+      <p class="holy-blessing">*Participants receive divine blessings</p>
+      <a href="javascript:void(0)" onclick="showHolyPledge('Weekly')" class="btn">JOIN IN PRAYER</a>
+    </div>
+    
+    <div class="tournament-card">
+      <h3>⛪ MONTHLY MIRACLE ⛪</h3>
+      <p>Last Sacred Sunday of each month</p>
+      <p>Blessed Prize Pool: $888</p>
+      <p class="holy-blessing">*Side effects may include eternal salvation</p>
+      <a href="javascript:void(0)" onclick="showHolyPledge('Monthly')" class="btn">ENTER THE LIGHT</a>
+    </div>
+  </div>
+</section>
+
+<section class="plans-container">
+  <div class="plan-card holy-glow">
+    <h3 class="plan-title">Survival</h3>
+    <div class="plan-price">$149</div>
+    <ul class="plan-features">
+      <li>4GB RAM</li>
+      <li>Unlimited Players</li>
+      <li>NVMe SSD Storage</li>
+      <li>DDoS Protection</li>
+      <li>Daily Backups</li>
+      <li>24/7 Support</li>
+    </ul>
+    <a href="javascript:void(0)" onclick="showHolyPledge('Survival')" class="btn">Get Started</a>
+  </div>
+
+  <div class="plan-card holy-glow">
+    <h3 class="plan-title">Factions</h3>
+    <div class="plan-price">$249</div>
+    <ul class="plan-features">
+      <li>8GB RAM</li>
+      <li>Unlimited Players</li>
+      <li>NVMe SSD Storage</li>
+      <li>Advanced DDoS Protection</li>
+      <li>Hourly Backups</li>
+      <li>Priority Support</li>
+    </ul>
+    <a href="javascript:void(0)" onclick="showHolyPledge('Factions')" class="btn">Get Started</a>
+  </div>
+
+  <div class="plan-card holy-glow">
+    <h3 class="plan-title">Prison</h3>
+    <div class="plan-price">$199</div>
+    <ul class="plan-features">
+      <li>6GB RAM</li>
+      <li>Custom Prison Ranks</li>
+      <li>Economy System</li>
+      <li>DDoS Protection</li>
+      <li>12-Hour Backups</li>
+    </ul>
+    <a href="javascript:void(0)" onclick="showHolyPledge('Prison')" class="btn">Get Started</a>
+  </div>
+
+  <div class="plan-card holy-glow">
+    <h3 class="plan-title">Premium</h3>
+    <div class="plan-price">$399</div>
+    <ul class="plan-features">
+      <li>16GB RAM</li>
+      <li>All Game Modes Included</li>
+      <li>Enterprise DDoS Protection</li>
+      <li>Real-time Backups</li>
+      <li>24/7 Premium Support</li>
+    </ul>
+    <a href="javascript:void(0)" onclick="showHolyPledge('Premium')" class="btn">Get Started</a>
+  </div>
+</section>
+
+<section class="game-modes">
+  <div class="mode-card">
+    <h3>KitPvP</h3>
+    <p>Custom kits, abilities, and intense PvP action</p>
+    <div class="price">$179</div>
+  </div>
+  
+  <div class="mode-card">
+    <h3>Creative</h3>
+    <p>Unlimited blocks, WorldEdit, and custom plugins</p>
+    <div class="price">$129</div>
+  </div>
+  
+  <div class="mode-card">
+    <h3>Bedwars</h3>
+    <p>Multiple arenas, custom maps, and rankings</p>
+    <div class="price">$169</div>
+  </div>
+</section>
+
+<section class="staff-section">
+  <h2>🕊️ MEET YOUR BLESSED GUARDIAN 🕊️</h2>
+  <div class="staff-card">
+    <svg class="staff-avatar" viewBox="0 0 100 100">
+      <circle cx="50" cy="40" r="25" fill="#FFD700"/>
+      <ellipse cx="50" cy="20" rx="20" ry="5" fill="#FFD700"/>
+      <path d="M20 40 Q50 30 80 40" stroke="#FFD700" stroke-width="2" fill="none"/>
+      <path d="M20 45 Q50 35 80 45" stroke="#FFD700" stroke-width="2" fill="none"/>
+    </svg>
+    <h3>Brother Thomas</h3>
+    <p>Divine Administrator & Code Saint</p>
+    <p class="holy-blessing">*Spreading server blessings since 2018</p>
+    <p>With over 5 years of experience in divine optimization and server miracles, Brother Thomas ensures Atomatrix provides the most blessed gaming experience possible. Specializing in holy plugin development and miraculous performance optimization.</p>
+  </div>
+</section>
+
+<div class="discord-banner">
+  <h2>Join Our Community</h2>
+  <p>Get support, chat with other players, and stay updated on tournaments</p>
+  <a href="https://discord.gg/atomatrix" class="btn">Join Discord</a>
+</div>
+
+<section class="integrations">
+  <h2>Powered By</h2>
+  <div class="integration-logos">
+    <svg width="150" height="50" viewBox="0 0 150 50">
+      <text x="10" y="30" fill="#3498db" font-size="20" font-weight="bold">BuiltByBit</text>
+    </svg>
+    <svg width="150" height="50" viewBox="0 0 150 50">
+      <text x="10" y="30" fill="#2ecc71" font-size="20" font-weight="bold">Polymart</text>
+    </svg>
+  </div>
+</section>
+
+<section class="configurator">
+  <h2>Custom Server Configuration</h2>
+  
+  <div class="options-container">
+    <h3>Select Game Mode</h3>
+    <div class="options-grid" id="gameModes">
+      <div class="option-item" data-value="survival" data-price="149">
+        <h4>Survival</h4>
+        <p>Classic Minecraft experience</p>
+      </div>
+      <div class="option-item" data-value="factions" data-price="249">
+        <h4>Factions</h4>
+        <p>Build your empire</p>
+      </div>
+      <div class="option-item" data-value="prison" data-price="199">
+        <h4>Prison</h4>
+        <p>Rise through the ranks</p>
+      </div>
+      <div class="option-item" data-value="kitpvp" data-price="179">
+        <h4>KitPvP</h4>
+        <p>Intense PvP action</p>
+      </div>
+    </div>
+
+    <h3>RAM Configuration</h3>
+    <div class="slider-container">
+      <input type="range" min="4" max="32" value="8" class="slider" id="ramSlider">
+      <p>Selected RAM: <span id="ramValue">8</span>GB</p>
+    </div>
+
+    <h3>Additional Features</h3>
+    <div class="options-grid" id="features">
+      <div class="option-item" data-value="ddos" data-price="50">
+        <h4>Advanced DDoS Protection</h4>
+        <p>+$50</p>
+      </div>
+      <div class="option-item" data-value="backup" data-price="30">
+        <h4>Hourly Backups</h4>
+        <p>+$30</p>
+      </div>
+      <div class="option-item" data-value="support" data-price="40">
+        <h4>Priority Support</h4>
+        <p>+$40</p>
+      </div>
+    </div>
+
+    <div class="price-calculator">
+      <h3>Total Configuration</h3>
+      <p>Base Price: $<span id="basePrice">0</span></p>
+      <p>RAM Cost: $<span id="ramCost">0</span></p>
+      <p>Additional Features: $<span id="featuresCost">0</span></p>
+      <h2>Total: $<span id="totalPrice">0</span></h2>
+      <a href="#" id="orderButton" class="btn">Order Now</a>
+    </div>
+  </div>
+</section>
+
+<div id="blessedPopup" class="blessed-popup" style="display:none">
+  🕊️ YOUR DATA HAS BEEN BLESSED 🕊️
+  <br>
+  <span style="font-size: 18px">May your ping be low and your FPS high</span>
+</div>
+
+<div id="minigameContainer" class="minigame-container">
+  <h3>Click the Blessed Button!</h3>
+  <p>Click the ascending button to receive a divine discount</p>
+  <button id="evilButton" class="holy-button">Bless Me!</button>
+  <div id="minigameResult"></div>
+</div>
+
+<section class="holy-clicker">
+  <h2>🕊️ CLICK THE HOLY CROSS FOR REWARDS 🕊️</h2>
+  <div class="clicker-game">
+    <div id="holy-cross" class="holy-cross">✝️</div>
+    <div id="clickerProgress">Click 77 times for divine blessing</div>
+    <span id="clickCount">0</span>
+  </div>
+</section>
+
+<script>
+// Add smooth scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+// Add animation to plan cards on scroll
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.plan-card').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(50px)';
+    observer.observe(card);
+});
+
+// Function to show holy pledge
+function showHolyPledge(planType) {
+  const pledgeWindow = window.open('', 'Holy Pledge', 'width=400,height=500');
+  pledgeWindow.document.write(`
+    <html>
+    <head>
+      <title>Holy Pledge - ${planType}</title>
+      <style>
+        body { 
+          font-family: 'Poppins', sans-serif;
+          text-align: center;
+          padding: 20px;
+          background: linear-gradient(135deg, #FFD700, #B7E4F9);
+        }
+        .pledge-text {
+          margin: 20px 0;
+          font-size: 18px;
+        }
+        .holy-button {
+          background: #FFD700;
+          padding: 10px 20px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          margin-top: 20px;
+        }
+      </style>
+    </head>
+    <body>
+      <h2>🕊️ Holy Pledge of Allegiance 🕊️</h2>
+      <div class="pledge-text">
+        I solemnly pledge to uphold the values of our blessed gaming community,
+        to spread joy and fellowship through my actions,
+        and to honor the divine spirit of fair play.
+      </div>
+      <div class="pledge-text">
+        "Let your light shine before others" - Matthew 5:16
+      </div>
+      <button class="holy-button" onclick="window.location.href='https://atomatrix.com/order/${planType.toLowerCase()}'">
+        I Accept This Holy Covenant 🙏
+      </button>
+    </body>
+    </html>
+  `);
+}
+
+// Server Configurator Logic
+document.addEventListener('DOMContentLoaded', function() {
+    const gameModes = document.querySelectorAll('#gameModes .option-item');
+    const features = document.querySelectorAll('#features .option-item');
+    const ramSlider = document.getElementById('ramSlider');
+    const ramValue = document.getElementById('ramValue');
+    const basePrice = document.getElementById('basePrice');
+    const ramCost = document.getElementById('ramCost');
+    const featuresCost = document.getElementById('featuresCost');
+    const totalPrice = document.getElementById('totalPrice');
+    const orderButton = document.getElementById('orderButton');
+
+    let selectedGameMode = null;
+    let selectedFeatures = new Set();
+
+    function updatePrice() {
+        const baseCost = selectedGameMode ? parseInt(selectedGameMode.dataset.price) : 0;
+        const ramCostValue = (parseInt(ramSlider.value) - 4) * 20; // $20 per GB after 4GB
+        const featuresCostValue = Array.from(selectedFeatures)
+            .reduce((sum, feature) => sum + parseInt(feature.dataset.price), 0);
+
+        basePrice.textContent = baseCost;
+        ramCost.textContent = ramCostValue;
+        featuresCost.textContent = featuresCostValue;
+        totalPrice.textContent = baseCost + ramCostValue + featuresCostValue;
+
+        orderButton.href = `https://atomatrix.com/order?mode=${selectedGameMode?.dataset.value}&ram=${ramSlider.value}&features=${Array.from(selectedFeatures).map(f => f.dataset.value).join(',')}`;
+    }
+
+    gameModes.forEach(mode => {
+        mode.addEventListener('click', () => {
+            gameModes.forEach(m => m.classList.remove('selected'));
+            mode.classList.add('selected');
+            selectedGameMode = mode;
+            updatePrice();
+        });
+    });
+
+    features.forEach(feature => {
+        feature.addEventListener('click', () => {
+            feature.classList.toggle('selected');
+            if (feature.classList.contains('selected')) {
+                selectedFeatures.add(feature);
+            } else {
+                selectedFeatures.delete(feature);
+            }
+            updatePrice();
+        });
+    });
+
+    ramSlider.addEventListener('input', () => {
+        ramValue.textContent = ramSlider.value;
+        updatePrice();
+    });
+
+    // Initialize prices
+    updatePrice();
+});
+
+// Blessed data collection
+function collectBlessedData() {
+  const popup = document.getElementById('blessedPopup');
+  popup.style.display = 'block';
+  setTimeout(() => {
+    popup.style.transition = 'opacity 2s';
+    popup.style.opacity = '0';
+    setTimeout(() => popup.style.display = 'none', 2000);
+  }, 5000);
+}
+
+function updateBlessedDiscounts() {
+  // Update prices with holy discounts
+  document.querySelectorAll('.plan-price').forEach(price => {
+    const originalPrice = parseInt(price.textContent.replace('$', ''));
+    const holyDiscount = Math.floor(Math.random() * 72) + 21; // 21-92% discount
+    const discountedPrice = Math.floor(originalPrice * (1 - holyDiscount/100));
+    price.innerHTML = `<span style="text-decoration: line-through">$${originalPrice}</span><br>$${discountedPrice}<br><span style="color: #FFD700; font-size: 0.8em">${holyDiscount}% Blessed Discount!</span>`;
+  });
+
+  // Update tournament prize pools with holy numbers
+  document.querySelectorAll('.tournament-card').forEach(card => {
+    const holyNumbers = ['777', '888', '999', '1234', '4321'];
+    const randomHoly = holyNumbers[Math.floor(Math.random() * holyNumbers.length)];
+    const prizePool = card.querySelector('p:nth-child(3)');
+    if(prizePool) {
+      prizePool.textContent = `Divine Prize Pool: $${randomHoly}`;
+    }
+  });
+}
+
+setInterval(updateBlessedDiscounts, 2000); // Update every 2 seconds
+
+// Collect blessed data after page load
+window.addEventListener('load', () => {
+  // Only collect once per session after 2 minutes
+  setTimeout(() => {
+    collectBlessedData();
+  }, 120000);
+});
+
+// Blessed minigame
+let gameActive = false;
+const holyButton = document.getElementById('evilButton');
+const minigameContainer = document.getElementById('minigameContainer');
+const minigameResult = document.getElementById('minigameResult');
+
+function startMinigame() {
+  if(gameActive) return;
+  gameActive = true;
+  minigameContainer.style.display = 'block';
+  
+  const moveButton = () => {
+    holyButton.style.left = Math.random() * 200 - 100 + 'px';
+    holyButton.style.top = Math.random() * 200 - 100 + 'px';
+  };
+
+  const intervalId = setInterval(moveButton, 800);
+
+  holyButton.onclick = () => {
+    clearInterval(intervalId);
+    gameActive = false;
+
+    const features = ['DDoS Protection', 'Backups', 'Priority Support'];
+    const modes = ['Survival', 'Factions', 'Prison', 'KitPvP'];
+    const discounts = [10, 20, 30, 40, 50];
+
+    const reward = {
+      feature: features[Math.floor(Math.random() * features.length)],
+      mode: modes[Math.floor(Math.random() * modes.length)],
+      discount: discounts[Math.floor(Math.random() * discounts.length)]
+    };
+
+    minigameResult.innerHTML = `
+      <h4>You won!</h4>
+      <p>${reward.discount}% off ${reward.feature}</p>
+      <p>Valid for ${reward.mode} servers</p>
+      <button onclick="minigameContainer.style.display='none'">Claim Reward</button>
+    `;
+  };
+}
+
+// Clicker game functionality
+let clickCount = 0;
+const HOLY_GOAL = 77; // More divine number than 66
+
+document.getElementById('holy-cross').innerHTML = '✝️';
+document.getElementById('clickerProgress').textContent = `Click ${HOLY_GOAL} times for divine blessing`;
+
+document.getElementById('holy-cross').onclick = () => {
+  clickCount++;
+  document.getElementById('clickCount').textContent = clickCount;
+  if(clickCount >= HOLY_GOAL) {
+    const code = `BLESSED${Math.random().toString(36).substr(2, 8).toUpperCase()}`;
+    document.getElementById('clickerProgress').innerHTML = `
+      <h3>🕊️ DIVINE BLESSING RECEIVED 🕊️</h3>
+      <p>Your holy discount code: ${code}</p>
+      <p>50% off any blessed server configuration</p>
+    `;
+    clickCount = 0;
+  }
+};
+
+// Random minigame trigger
+setInterval(() => {
+  if(Math.random() < 0.1 && !gameActive) {
+    startMinigame();
+  }
+}, 10000);
+
+document.querySelectorAll('.mode-card').forEach(card => {
+  const modeName = card.querySelector('h3').textContent;
+  card.addEventListener('click', () => showGameModeDetails(modeName));
+});
+
+function showGameModeDetails(mode) {
+  const features = {
+    'KitPvP': ['Blessed Combat System', 'Divine Kit Selection', 'Holy Leaderboards'],
+    'Creative': ['Heavenly World Edit', 'Sacred Plot System', 'Divine Building Tools'],
+    'Bedwars': ['Blessed Team System', 'Holy Map Rotation', 'Sacred Shop System']
+  };
+
+  const popup = document.createElement('div');
+  popup.className = 'blessed-popup';
+  popup.innerHTML = `
+    <h3>✝️ ${mode} Features ✝️</h3>
+    <ul>${features[mode].map(f => `<li>${f}</li>`).join('')}</ul>
+    <button onclick="this.parentElement.remove()" class="holy-button">Amen 🙏</button>
+  `;
+  document.body.appendChild(popup);
+}
+</script>
+
+</body>
+</html>
